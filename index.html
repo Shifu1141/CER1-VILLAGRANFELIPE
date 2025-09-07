@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smart Events </title>
+    <link rel="stylesheet" href="css/mis-estilos.css">
+</head>
+
+
+<body>
+    <header>
+        <h1> Smart Events</h1>
+        <nav>
+            <button id="mobile-menu-button">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#events" class="nav-link">Eventos</a></li>
+                <li><a href="#community" class="nav-link">Comunidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Evento Destacado</h2>
+            <div class="hero">
+                <img src="img/descarga.jpg" alt="Imagen del evento destacado">
+                <h3>Fiesta fin de año 2025!!</h3>
+                <p>El evento más esperado del año. No te lo pierdas!</p>
+                
+                <!-- Contador Regresivo -->
+                <div id="cuentaAtras">
+                    <p>Faltan:</p>
+                    <span id="dias">00</span> Días
+                    <span id="horas">00</span> Horas
+                    <span id="minutos">00</span> Minutos
+                    <span id="segundos">00</span> Segundos
+                </div>
+                <div id="mensajeEvento" class="hidden">
+                    <p>¡El evento ha comenzado!</p>
+                </div>
+
+                <a href="#eventos" class="cta-button nav-link">Más información</a>
+            </div>
+
+        </section>
+
+        <!-- PÁGINA DE EVENTOS -->
+        <section id="eventos" class="page">
+            <h2>Próximos Eventos</h2>
+            <div class="event-list">
+                <!-- Tarjeta de Evento 1 -->
+                <div class="event-card">
+                    <img src="img/edocaroe.jpg" alt="edocaroe">
+                    <h4>Edo Caroe</h4>
+                    <p><strong>Fecha:</strong> 26, 27, 28 de Septiembre</p>
+                    <p><strong>Lugar:</strong> Aula magna, Casa central USM.</p>
+                    <p><strong>Valor:</strong> $5.000</p>
+                </div>
+                <!-- Tarjeta de Evento 2 -->
+                <div class="event-card">
+                    <img src="img/luisslimming.jpg" alt="luisslimming">
+                    <h4>Luis Slimming</h4>
+                    <p><strong>Fecha:</strong> 12 de Septiembre, 20:00 HRS</p>
+                    <p><strong>Lugar:</strong> Aula magna, Casa central USM.</p>
+                    <p><strong>Valor:</strong> $5.000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA DE COMUNIDAD -->
+        <section id="Comunidad" class="page">
+            <h2>Comunidad</h2>
+            <!-- Formulario para publicar un comentario -->
+            <form id="comentarios">
+                <h3>Deja tu Comentario</h3>
+                <label for="alias">Nombre o Alias:</label>
+                <input type="text" id="alias" required>
+                
+                <label for="message">Mensaje (máx 500 caracteres):</label>
+                <textarea id="message" maxlength="500" required></textarea>
+                
+                <button type="submit">Publicar</button>
+            </form>
+
+            <!-- Lista donde se mostrarán los comentarios -->
+            <h3>Comentarios</h3>
+            <div id="listacomentarios">
+                <div class="comment">
+                    <p><strong>Matias Yohannessen:</strong> ¡Qué emoción por la Fiesta!</p>
+                    <span>Publicado el: 5/9/2025, 10:30:00</span>
+                </div>
+            </div>
+        </section>
+
+    <!-- Enlace al archivo JavaScript al final del body para un mejor rendimiento -->
+    <script src="script.js"></script>
+    </main>
+</body>
+</html>
