@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const eventos = [
-    { id: "contador-TLP-hero", fecha: "2025-12-31T21:30:00" },
+    { id: "contador-hero", fecha: "2025-12-31T21:30:00" },
   ];
 
   eventos.forEach(evento => {
