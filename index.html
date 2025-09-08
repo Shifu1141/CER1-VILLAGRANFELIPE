@@ -1,101 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Smart Events </title>
-    <link rel="stylesheet" href="css/mis-estilos.css">
+    <title>Smart Events</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-
-<body>
-    <header>
-        <h1> Smart Events</h1>
-        <nav>
-            <button id="mobile-menu-button">☰</button>
-            <ul id="nav-menu">
-                <li><a href="#home" class="nav-link">Inicio</a></li>
-                <li><a href="#events" class="nav-link">Eventos</a></li>
-                <li><a href="#community" class="nav-link">Comunidad</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Evento Destacado</h2>
-            <div class="hero">
-                <img src="img/descarga.jpg" alt="Imagen del evento destacado">
-                <h3>Fiesta fin de año 2025!!</h3>
-                <p>El evento más esperado del año. No te lo pierdas!</p>
-                
-                <!-- Contador Regresivo -->
-                <div id="cuentaAtras">
-                    <p>Faltan:</p>
-                    <span id="dias">00</span> Días
-                    <span id="horas">00</span> Horas
-                    <span id="minutos">00</span> Minutos
-                    <span id="segundos">00</span> Segundos
-                </div>
-                <div id="mensajeEvento" class="hidden">
-                    <p>¡El evento ha comenzado!</p>
-                </div>
-
-                <a href="#eventos" class="cta-button nav-link">Más información</a>
-            </div>
-
-        </section>
-
-        <!-- PÁGINA DE EVENTOS -->
-        <section id="eventos" class="page">
-            <h2>Próximos Eventos</h2>
-            <div class="event-list">
-                <!-- Tarjeta de Evento 1 -->
-                <div class="event-card">
-                    <img src="img/edocaroe.jpg" alt="edocaroe">
-                    <h4>Edo Caroe</h4>
-                    <p><strong>Fecha:</strong> 26, 27, 28 de Septiembre</p>
-                    <p><strong>Lugar:</strong> Aula magna, Casa central USM.</p>
-                    <p><strong>Valor:</strong> $5.000</p>
-                </div>
-                <!-- Tarjeta de Evento 2 -->
-                <div class="event-card">
-                    <img src="img/luisslimming.jpg" alt="luisslimming">
-                    <h4>Luis Slimming</h4>
-                    <p><strong>Fecha:</strong> 12 de Septiembre, 20:00 HRS</p>
-                    <p><strong>Lugar:</strong> Aula magna, Casa central USM.</p>
-                    <p><strong>Valor:</strong> $5.000</p>
+<body id="index">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#index">Smart Events</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#index">Inicio</a>
+                    <a class="nav-link" href="eventos.html">Eventos</a>
+                    <a class="nav-link" href="comunidad.html">Comunidad</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <!-- PÁGINA DE COMUNIDAD -->
-        <section id="Comunidad" class="page">
-            <h2>Comunidad</h2>
-            <!-- Formulario para publicar un comentario -->
-            <form id="comentarios">
-                <h3>Deja tu Comentario</h3>
-                <label for="alias">Nombre o Alias:</label>
-                <input type="text" id="alias" required>
-                
-                <label for="message">Mensaje (máx 500 caracteres):</label>
-                <textarea id="message" maxlength="500" required></textarea>
-                
-                <button type="submit">Publicar</button>
-            </form>
+<div class="container-fluid">
+  <section id="hero" class="row align-items-center">
+    
+    <div id="contenido" class="col-md-7 p-5">
+      <h1>Evento Destacado</h1>
+      <h5>Fiesta fin de año 2025!!</h5>
+      <div id="contador-TLP-hero"></div>
+      <a href="eventos.html" class="btn btn-primary mt-3">Más información</a>
+    </div>
 
-            <!-- Lista donde se mostrarán los comentarios -->
-            <h3>Comentarios</h3>
-            <div id="listacomentarios">
-                <div class="comment">
-                    <p><strong>Matias Yohannessen:</strong> ¡Qué emoción por la Fiesta!</p>
-                    <span>Publicado el: 5/9/2025, 10:30:00</span>
-                </div>
-            </div>
-        </section>
+    <div class="col-md-5 text-center">
+      <img src="img/findeaño.jpg" 
+           alt="Imagen fiesta fin de año"
+           class="img-fluid rounded">
+    </div>
 
-    <!-- Enlace al archivo JavaScript al final del body para un mejor rendimiento -->
-    <script src="script.js"></script>
-    </main>
+  </section>
+</div>    
+    <script src="js/bootstrap.js"></script>
+    <script src="js/eventos.js"></script>
 </body>
+
 </html>
